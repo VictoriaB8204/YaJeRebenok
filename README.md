@@ -1,3 +1,3 @@
 # YaJeRebenok
-project for Grinyak
+project for Grinyak:
 Mobile application for kids.
