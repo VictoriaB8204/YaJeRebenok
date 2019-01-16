@@ -22,13 +22,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="185dp"
         android:layout_marginLeft="185dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="532dp"
         android:layout_marginEnd="110dp"
         android:layout_marginRight="110dp"
         android:onClick="onClick"
         android:text="Пропустить"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="354dp"
+        android:layout_height="342dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="146dp"
+        android:background="#0000FF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
