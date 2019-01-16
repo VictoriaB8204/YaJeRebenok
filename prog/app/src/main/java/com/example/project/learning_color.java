@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class learning_color extends AppCompatActivity {
     SoundPool sp;
     Button next;
+    Button color_learning_image;
     MediaPlayer mediaPlayer;
     AudioManager am;
     @Override
@@ -21,16 +22,14 @@ public class learning_color extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learning_color);
         next = findViewById(R.id.goto_play_choose_color);
-        sp = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
         String sound_name="sound_full";
         final MediaPlayer mp = MediaPlayer.create(learning_color.this, getResources().getIdentifier(sound_name, "raw", getPackageName()));
         mp.start();
-
-
-
-            View.OnClickListener oclButton1 = new View.OnClickListener() {
+        //Wait();
+         View.OnClickListener oclButton1 = new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    mp.stop();
                     Intent intent = new Intent(learning_color.this, choose_color.class);
                     startActivity(intent);
 
@@ -38,6 +37,17 @@ public class learning_color extends AppCompatActivity {
             };
             next.setOnClickListener(oclButton1);
 
+    }
+    protected void Wait(){
+        color_learning_image=findViewById(R.id.color_learning_image);
+        for(int i=0;i<10;i++){
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            color_learning_image.setBackgroundColor(i);
+        }
     }
 
 }
